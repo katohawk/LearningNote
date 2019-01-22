@@ -42,11 +42,11 @@ https://github.com/he303954106/LearningNote
 
 状态行,Headers,Body
 
-![WX20190122-164605](/Users/weelad/Downloads/WX20190122-164605.png)
+![WX20190122-164605](./WX20190122-164605.png)
 
 ### 响应报文
 
-![WX20190122-164616](/Users/weelad/Downloads/WX20190122-164616.png)
+![WX20190122-164616](./WX20190122-164616.png)
 
 ## 请求方法
 
