@@ -10,3 +10,4 @@
 
 ## [Https原理](./互联网协议/Https/Https原理.md)
 
+## [垃圾回收机制](./JVM/GC/Java垃圾回收机制.md)

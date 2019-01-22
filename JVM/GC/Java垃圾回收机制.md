@@ -99,3 +99,11 @@ Stop The World
 ## 总结
 
 需要对象是否存活和怎么清除回收对象
+
+
+
+## 参考
+
+http://jayfeng.com/2016/03/11/%E7%90%86%E8%A7%A3Java%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/
+
+http://www.cnblogs.com/ityouknow/p/5614961.html
