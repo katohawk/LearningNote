@@ -42,3 +42,5 @@
 
 ### [问题](./Other/问题.md)
 
+### [LruCache](./Other/LruCache算法.md)
+
