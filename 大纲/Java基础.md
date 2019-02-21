@@ -1,12 +1,18 @@
 ## Java基础
 
-##### String buffer 与String builder 的区别
+### String buffer 与String builder 的区别
+
+http://www.importnew.com/18167.html
+
+http://www.importnew.com/15856.html
 
 String 类型和StringBuffer的主要性能区别：String是不可变的对象, 因此在每次对String 类型进行改变的时候，都会生成一个新的 String 对象，然后将指针指向新的 String 对象，所以经常改变内容的字符串最好不要用 String ，因为每次生成对象都会对系统性能产生影响，特别当内存中无引用对象多了以后， JVM 的 GC 就会开始工作，性能就会降低。
 
 StringBuffer 是线程安全的, StringBuilder 不是线程安全的。
 
-##### String 为什么要设计成不可变的
+
+
+### String 为什么要设计成不可变的
 
 String类是final的,其内部主要是由char数组来实现,其中的相关操作,例如substring,concat,replace,都是重新生成了一个新的字符串对象(可参见源码),最原始的字符串并没有被改变
 
@@ -14,7 +20,11 @@ String类是final的,其内部主要是由char数组来实现,其中的相关操
 
 
 
-##### object类的equal 和hashcode 方法重写，为什么
+### object类的equal 和hashcode 方法重写，为什么
+
+http://www.importnew.com/25783.html
+
+http://www.importnew.com/18851.html
 
 equlas()和hashcode()都是可重写的方法
 
@@ -80,17 +90,41 @@ public class Main {
 
 所以需要重写hashcode方法,让equals方法和hashcode方法始终在逻辑上保持一致性
 
-##### int,long的取值范围以及BigDecimal，数值越界了如何处理？
 
-int、char、long各占多少字节数
 
-int与integer的区别
+### int,long的取值范围以及BigDecimal，数值越界了如何处理？
 
-string 转换成 integer的方式及原理
+转换为更高级别或BigDecimal
 
-讲一下常见编码方式
+### int、char、long各占多少字节数
 
-utf-8编码中的中文占几个字节；int型几个字节
+http://www.importnew.com/18346.html
+
+### int与integer的区别
+
+int是基本类型,Integer是int的包装类
+
+Integer也必须实例化才能使用(表面上是自动装箱)
+
+
+
+### string 转换成 integer的方式及原理
+
+integer.parseInt(string str)方法调用Integer内部的 
+parseInt(string str,10)方法,默认基数为10，parseInt内部首先 
+判断字符串是否包含符号（-或者+），则对相应的negative和limit进行 
+赋值，然后再循环字符串，对单个char进行数值计算Character.digit(char ch, int radix) 
+在这个方法中，函数肯定进入到0-9字符的判断（相对于string转换到int）， 否则会抛出异常，数字就是如上面进行拼接然后生成的int类型数值
+
+### 讲一下常见编码方式
+
+http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html
+
+ASCII GBK unicode
+
+### utf-8编码中的中文占几个字节(两个char,4)；int型几个字节(4)
+
+UTF-8 是 Unicode 的实现方式之一
 
 
 
@@ -100,17 +134,23 @@ utf-8编码中的中文占几个字节；int型几个字节
 
 同步普通方法跟static方法之间的区别
 
-父类的静态方法能否被子类重写
+### 父类的静态方法能否被子类重写(不能)
 
-静态属性和静态方法是否可以被继承？是否可以被重写？以及原因？
+### 静态属性和静态方法是否可以被继承？是否可以被重写？以及原因？
 
-静态内部类的设计意图
+静态方法不跟所属类相关联,不需要通过创建对象来调用,所以就谈不上重写,
 
-静态代理和动态代理的区别，什么场景使用
+重写的目的在于根据创建对象的所属类型不同而表现出多态
+
+### 静态代理和动态代理的区别，什么场景使用
 
 
 
-抽象类和接口的区别
+### 抽象类和接口的区别
+
+http://www.importnew.com/12399.html
+
+
 
 Java为何引入泛型，泛型边界
 
