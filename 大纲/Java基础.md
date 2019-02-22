@@ -150,9 +150,19 @@ UTF-8 是 Unicode 的实现方式之一
 
 http://www.importnew.com/12399.html
 
+最新版JAVA当中,抽象类和接口已经接近相同了,当单继承可以考虑抽象类,多继承用接口
 
 
-Java为何引入泛型，泛型边界
+
+### Java为何引入泛型，泛型边界
+
+http://www.importnew.com/19740.html
+
+为了编译时代码类型不出错
+
+请记住PECS原则：生产者（Producer）使用extends，消费者（Consumer）使用super
+
+
 
 注解如何获取，反射为何耗性能
 
