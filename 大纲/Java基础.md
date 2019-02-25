@@ -164,21 +164,44 @@ http://www.importnew.com/19740.html
 
 
 
-注解如何获取，反射为何耗性能
+### 注解如何获取
 
-类的初始化过程
+### 反射为何耗性能
+
+getMethod和getDeclaredField方法会比invoke和set方法耗时；
+
+反射包括了一些动态类型，所以 JVM 无法对这些代码进行优化。因此，反射操作的效 
+率要比那些非反射操作低得多。我们应该避免在经常被 执行的代码或对性能要求很高的程 
+序中使用反射。
+
+
+
+### 类的初始化过程
+
+https://blog.csdn.net/w1196726224/article/details/56529615
 
 类的初始化顺序依次是（静态变量、静态代码块）>（变量、代码块）>构造方法
 
-不用锁如何保证int自增安全
+### 不用锁如何保证int自增安全
 
-深拷贝浅拷贝
+使用AtomicInteger类
 
-谈谈对java多态的理解
+### 深拷贝浅拷贝
 
-final，finally，finalize的区别
+实则浅拷贝和深拷贝只是相对的，如果一个对象内部只有基本数据类型，那用 clone() 方法获取到的就是这个对象的深拷贝，而如果其内部还有引用数据类型，那用 clone() 方法就是一次浅拷贝的操作。
 
-Java的异常体系
+### 谈谈对java多态的理解
 
-NIO
+https://www.cnblogs.com/chenssy/p/3372798.html
+
+### final，finally，finalize的区别
+
+final       用于申明属性，方法和类，表示属性不可变，方法不可以被覆盖，类不可以被继承。
+finally     是异常处理语句结构中，表示总是执行的部分。　　
+
+finallize   表示是object类一个方法，在垃圾回收机制中执行的时候会被调用被回收对象的方法。允许回收此前未回收的内存垃圾。所有object都继承了finalize（）方法
+
+### Java的异常体系
+
+### NIO
 
