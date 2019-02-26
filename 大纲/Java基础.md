@@ -203,5 +203,18 @@ finallize   表示是object类一个方法，在垃圾回收机制中执行的�
 
 ### Java的异常体系
 
+https://blog.csdn.net/liuhenghui5201/article/details/18675391
+
+1、 异常是程序运行过程过程出现的错误，在Java中用类来描述，用对象来表示具体的异常。 
+        Java将其区分为Error与Exception，Error是程序无力处理的错误，Exception是程序可以处理的错误。 
+        异常处理是为了程序的健壮性。 
+2、 Java异常类来自于Java API定义和用户扩展。通过继承Java API异常类可以实现异常的转译。 
+3、 异常能处理就处理，不能处理就抛出，最终没有处理的异常JVM会进行处理。 
+4、 异常可以传播，也可以相互转译，但应该根据需要选择合理的异常转译的方向。 
+5、 对于一个应用系统，设计一套良好的异常处理体系很重要。这一点在系统设计的时候就应该考虑到。
+
 ### NIO
 
+### Resume
+
+https://github.com/Trinea/trinea-download/tree/master/resume
